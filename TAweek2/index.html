@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SI Exotic Market</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+<div class="container">
+<a class="navbar-brand fw-bold" href="#">SI EXOTIC MARKET</a>
+
+<div class="ms-auto d-flex gap-2">
+
+<button class="btn btn-outline-light btn-sm"
+        data-bs-toggle="modal"
+        data-bs-target="#wishlistModal"
+        onclick="tampilkanWishlist()">
+Wishlist (<span id="wishlist-count">0</span>)
+</button>
+
+<button id="btn-theme" class="btn btn-outline-warning btn-sm">
+Mode Gelap
+</button>
+
+</div>
+</div>
+</nav>
+
+<!-- HERO -->
+<header class="hero-section text-white d-flex align-items-center justify-content-center text-center">
+<div>
+<h1 class="display-4 fw-bold">Manajemen Hewan Eksotis</h1>
+<p>Kelola data reptil, amfibi, burung, dan mamalia eksotis dengan aman dan mudah.</p>
+</div>
+</header>
+
+<!-- KATALOG -->
+<section class="container mt-5">
+<h2 class="mb-4">Katalog Hewan Eksotis</h2>
+
+<div class="row g-4">
+
+<!-- CARD 1 -->
+<div class="col-md-4">
+<div class="card h-100">
+<img src="assets/green-iguana2.jpg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Iguana Hijau (Green Iguana)</h5>
+<p class="text-danger fw-bold">Rp 850.000</p>
+<p class="stok text-muted">Stok: 15 ekor</p>
+
+
+<div class="mt-2">
+<button class="btn btn-warning btn-detail">Beli</button>
+<button class="btn btn-danger btn-wishlist">Wishlist</button>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- CARD 2 -->
+<div class="col-md-4">
+<div class="card h-100">
+<img src="assets/jenis-sugar-glider-1-Sugar-Glider-Daily.jpg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Sugar Glider Classic Grey</h5>
+<p class="text-danger fw-bold">Rp 450.000</p>
+<p class="stok text-muted">Stok: 8 ekor</p>
+
+
+<div class="mt-2">
+<button class="btn btn-warning btn-detail">Beli</button>
+<button class="btn btn-danger btn-wishlist">Wishlist</button>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- CARD 3 -->
+<div class="col-md-4">
+<div class="card h-100">
+<img src="assets/Barn_Owl,_Lancashire.jpg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Barn Owl (Burung Hantu)</h5>
+<p class="text-danger fw-bold">Rp 1.200.000</p>
+<p class="stok text-muted">Stok: 3 ekor</p>
+
+
+<div class="mt-2">
+<button class="btn btn-warning btn-detail">Beli</button>
+<button class="btn btn-danger btn-wishlist">Wishlist</button>
+</div>
+
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- MODAL WISHLIST -->
+<div class="modal fade" id="wishlistModal" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+
+<div class="modal-header">
+<h5 class="modal-title">Daftar Wishlist</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+</div>
+
+<div class="modal-body">
+<ul class="list-group" id="daftar-wishlist"></ul>
+</div>
+
+<div class="modal-footer">
+<button class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+<button class="btn btn-danger" onclick="hapusWishlist()">Kosongkan</button>
+</div>
+
+</div>
+</div>
+</div>
+
+<section id="tambah-data" class="container mt-5 pt-5 mb-5">
+        <div class="card shadow-sm border-0">
+            <div class="card-header bg-dark text-white">
+                <h4 class="mb-0"><i class="bi bi-plus-square"></i> Tambah Data Hewan Baru</h4>
+            </div>
+            <div class="card-body p-4 bg-light">
+                <form action="#" method="POST">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="namaHewan" class="form-label fw-bold">Nama Hewan / Spesies </span></label>
+                            <input type="text" class="form-control" id="namaHewan" placeholder="Contoh: Ball Python" required>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="kategoriHewan" class="form-label fw-bold">Kategori </span></label>
+                            <select class="form-select" id="kategoriHewan" required>
+                                <option value="" selected disabled>-- Pilih Kategori --</option>
+                                <option value="Reptil">Reptil (Ular, Kadal, Kura-kura)</option>
+                                <option value="Amfibi">Amfibi (Katak, Salamander)</option>
+                                <option value="Mamalia">Mamalia (Sugar Glider, Musang)</option>
+                                <option value="Aves">Aves (Burung Hantu, Parrot)</option>
+                                <option value="Arthropoda">Arthropoda (Tarantula, Kalajengking)</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="hargaHewan" class="form-label fw-bold">Harga Jual (Rp) </span></label>
+                            <input type="number" class="form-control" id="hargaHewan" placeholder="Contoh: 1500000" min="0" required>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="stokHewan" class="form-label fw-bold">Jumlah Stok </span></label>
+                            <input type="number" class="form-control" id="stokHewan" placeholder="Contoh: 10" min="1" required>
+                        </div>
+                        
+                        <div class="col-12 mb-4">
+                            <label for="deskripsiSingkat" class="form-label fw-bold">Deskripsi Tambahan</label>
+                            <textarea class="form-control" id="deskripsiSingkat" rows="3" placeholder="Masukkan detail seperti morph, usia, atau kondisi kesehatan..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-end gap-2">
+                        <button type="reset" class="btn btn-secondary">Reset Form</button>
+                        <button type="submit" class="btn btn-success"><i class="bi bi-save"></i> Simpan Data</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+<footer class="bg-dark text-white text-center py-3 mt-5">
+© 2026 Sistem Manajemen Hewan Eksotis
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
