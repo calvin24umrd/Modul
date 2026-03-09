@@ -1,0 +1,32 @@
+body {
+    transition: 0.3s;
+}
+
+/* HERO */
+.hero-section {
+    height: 50vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e');
+    background-size: cover;
+    background-position: center;
+}
+
+/* DARK MODE */
+.dark-mode {
+    background-color: #121212 !important;
+    color: white !important;
+}
+
+.dark-mode .card {
+    background-color: #1e1e1e !important;
+    color: white;
+}
+
+.dark-mode .navbar {
+    background-color: #000 !important;
+}
+
+.dark-mode .modal-content {
+    background-color: #1e1e1e;
+    color: white;
+}
