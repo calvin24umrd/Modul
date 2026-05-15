@@ -1,59 +1,177 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# PENJELASAN PROJECT LARAVEL
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## PETSHOP MARKET – Sistem Jual Beli Hewan Berbasis Web
 
-## About Laravel
+### Disusun Oleh:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+**Nama:** CALVIN UMARDI
+**NIM:** 162023044
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+# Deskripsi Project
 
-## Learning Laravel
+Project ini merupakan aplikasi berbasis web yang dibuat menggunakan framework Laravel dengan studi kasus sistem jual beli hewan peliharaan bernama **PetShop Market**.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+Aplikasi ini dirancang untuk membantu proses pengelolaan data hewan serta memberikan kemudahan bagi user dalam melihat, mencari, membeli, dan menyimpan hewan favorit ke wishlist.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Project ini dibuat untuk memenuhi tugas mata kuliah Sistem Informasi Berbasis Web dengan menerapkan konsep:
 
-## Laravel Sponsors
+* CRUD Laravel
+* Authentication Laravel Breeze
+* Middleware
+* Upload Gambar
+* Role Management
+* Blade Template
+* Storage Laravel
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+---
 
-### Premium Partners
+# Tujuan Project
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+Tujuan dibuatnya aplikasi ini adalah:
 
-## Contributing
+1. Memahami penggunaan framework Laravel.
+2. Menerapkan sistem autentikasi login dan register.
+3. Mengimplementasikan fitur CRUD.
+4. Menggunakan middleware untuk pembatasan akses.
+5. Membuat sistem role Admin dan User.
+6. Mengelola upload gambar menggunakan Laravel Storage.
+7. Membuat tampilan website yang interaktif dan responsif.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+# Teknologi Yang Digunakan
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+* Laravel
+* PHP
+* MySQL
+* Bootstrap 5
+* Laravel Breeze
+* Blade Template
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+# Fitur Utama Sistem
 
-## License
+## 1. Authentication
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Sistem memiliki fitur:
+
+* Login
+* Register
+* Logout
+
+Authentication dibuat menggunakan Laravel Breeze.
+
+---
+
+## 2. Role Management
+
+Terdapat 2 role pada sistem:
+
+### Admin
+
+Admin memiliki akses:
+
+* Menambah data hewan
+* Mengedit data hewan
+* Menghapus data hewan
+* Mengelola data produk
+
+### User
+
+User hanya dapat:
+
+* Melihat data hewan
+* Melihat detail hewan
+* Menambahkan wishlist
+* Membeli hewan
+
+---
+
+# 3. CRUD Data Hewan
+
+Fitur CRUD meliputi:
+
+* Create
+* Read
+* Update
+* Delete
+
+Data hewan yang dikelola:
+
+* Nama hewan
+* Jenis hewan
+* Umur
+* Harga
+* Deskripsi
+* Gambar hewan
+
+---
+
+# 4. Upload Gambar
+
+Sistem mendukung upload gambar hewan menggunakan Laravel Storage sehingga gambar dapat tersimpan dan ditampilkan pada website.
+
+---
+
+# 5. Search Hewan
+
+User dapat mencari hewan berdasarkan:
+
+* Nama hewan
+* Jenis hewan
+
+Fitur ini memudahkan user dalam menemukan hewan yang diinginkan.
+
+---
+
+# 6. Wishlist
+
+User dapat menyimpan hewan favorit ke wishlist sehingga dapat dilihat kembali nanti.
+
+---
+
+# 7. Pembelian Hewan
+
+Sistem menyediakan tombol beli sehingga user dapat melakukan simulasi pembelian hewan secara langsung.
+
+---
+
+# Struktur Halaman
+
+## Halaman Home
+
+Menampilkan:
+
+* Banner utama
+* Daftar hewan
+* Harga hewan
+* Tombol detail
+* Wishlist
+* Tombol beli
+
+## Dashboard
+
+Menampilkan:
+
+* Total hewan
+* Total user
+* Role user
+
+## Halaman Data Hewan
+
+Menampilkan seluruh data hewan dalam bentuk tabel.
+
+## Halaman Detail
+
+Menampilkan detail lengkap hewan.
+
+---
+
+# Kesimpulan
+
+Project PetShop Market berhasil dibuat menggunakan Laravel dengan menerapkan konsep fullstack web development seperti authentication, CRUD, middleware, upload gambar, dan role management.
+
+Sistem ini diharapkan dapat membantu pengguna dalam proses jual beli hewan secara lebih mudah, modern, dan terstruktur.
